@@ -9,7 +9,7 @@ public class RequestController {
 	
 	@GetMapping("/get")
 	public String getMod() {
-		return  "Get 테스트 API upate";
+		return  "Get 테스트 API";
 	}
 	
 	@PostMapping("/post")
