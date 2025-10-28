@@ -6,7 +6,8 @@ WORKDIR /app
 
 # 호스트에서 빌드된 JAR 파일을 컨테이너로 복사
 # 예: build/libs/springbootapp.jar
-COPY target/*.jar app.jar
+COPY cicd_test_ssong/target/*.jar app.jar
+#COPY /target/*.jar app.jar
 
 # 서비스 포트 설정 (필요 시 변경 가능)
 EXPOSE 8083
