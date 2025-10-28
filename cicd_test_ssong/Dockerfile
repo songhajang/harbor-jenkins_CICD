@@ -1,5 +1,5 @@
 # 1단계: 런타임 환경
-FROM eclipse-temurin:11-jre
+FROM eclipse-temurin:17-jre
 
 # 컨테이너 작업 디렉토리 설정
 WORKDIR /app
