@@ -5,13 +5,14 @@ FROM maven:3.9.3-eclipse-temurin-11 AS builder
 WORKDIR /app
 
 # 의존성 캐시를 위해 먼저 pom.xml만 복사
-COPY pom.xml .
+COPY cicd_test_ssong/pom.xml .
 
 # 의존성 미리 다운로드 (빌드 캐시 최적화)
 RUN mvn dependency:go-offline -B
 
 # 소스 코드 복사
-COPY src ./src
+COPY cicd_test_ssong/src ./src
+
 
 # Spring Boot 애플리케이션 빌드
 RUN mvn clean package -DskipTests
